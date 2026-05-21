@@ -3,10 +3,10 @@ name: Build and Deploy Azure Function App
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
-  AZURE_FUNCTIONAPP_NAME: kusumafunctionapp123   # change this
+  AZURE_FUNCTIONAPP_NAME: kusumafunctionapp2
   DOTNET_VERSION: '8.0'
 
 jobs:
@@ -20,7 +20,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: ${{ env.DOTNET_VERSION }}
+        dotnet-version: '8.0'
 
     - name: Restore dependencies
       run: dotnet restore
